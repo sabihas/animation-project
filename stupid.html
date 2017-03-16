@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
+	<style type="text/css">
+	#container{
+		position: relative;
+		height: 800px; width: 1430px;
+		/*border: 5px solid black;*/
+	}
+	.child{
+		height: 394px; width: 1430px;
+		
+	}
+	#Ggif{
+		height: 250px; width: 500px;
+	}
+	h1{
+		font-family: 'Cinzel', serif;
+	    font-size: 50px;
+	    text-shadow: 12px 16px 12px rgba(0, 0, 0, .6);
+	}
+	#first{
+
+	    background-color: rgba(0, 0, 0, .4);
+	}
+	#Sgif{
+		position: absolute;
+		
+	    height: 250px; width: 500px;
+	    right: 0;
+	}	
+	</style>
+</head>
+<body>
+<div id="container">
+   <div id="first" class="child">
+   <center>
+   <h1 id="name">Spooky Gallery</h1>
+   <a href="https://media.giphy.com/media/PACdYplMfHw8U/giphy.gif"><img id="Ggif" src="https://media.giphy.com/media/PACdYplMfHw8U/giphy.gif"></a>
+   </center>
+   </div>
+
+   <div id="second" class="child">
+   	<a href="scoobyRun.gif"><img id="Sgif" src="http://orig02.deviantart.net/1ad1/f/2013/090/f/5/scooby_doo_and_shaggy_running_icon__animated__by_scoobycool-d5zznd8.gif"></a>
+   </div>
+</div>
+
+<button onclick="Move()">Click Me</button>
+ 
+  <script type="text/javascript">
+  	function Move(){
+  		var elem = document.getElementById("Sgif"); //Sgif//
+  		var pos = -600;
+  		var id =setInterval(frame, 6);
+  		function frame(){
+  			if (pos == 900){
+  				clearInterval(id);
+  			} else {
+  			
+  				pos += .7;
+  				//elem.style.top =pos + 'px';
+  				elem.style.right = pos+ 'px';
+  			}
+  		}
+  	}
+
+  	// function setMove(){
+  	// 	setTimeOut(Move, 1000)
+  	// }
+  </script>   
+</body>
+</html>
